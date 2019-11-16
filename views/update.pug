@@ -1,0 +1,46 @@
+extends layout
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Editar produto
+        // register form
+        form(method='POST' action='/update/'+produtoId)
+          div.form-group
+            label(for='fabricante') Fabricante:
+            input#fabricante.form-control(type='text', placeholder='Fabricante' name='fabricante')
+          div.form-group
+            label(for='ano') Preço:
+            input#ano.form-control(type='text', placeholder='Ano' name='ano')
+          div.form-group
+            label(for='preco') Categoria:
+            input#preco.form-control(type='text', placeholder='Preço' name='preco')
+          div.form-group
+            label(for='cor') Cor:
+            input#cor.form-control(type='text', placeholder='Cor' name='cor')
+          div.form-group
+            label(for='condicao') Condição:
+            input#condicao.form-control(type='text', placeholder='Condição' name='condicao')
+          div.form-group
+            label(for='milhagem') Milhagem:
+            input#milhagem.form-control(type='text', placeholder='Milhagem' name='milhagem')
+          div.form-group
+            label(for='modelo') Modelo:
+            input#modelo.form-control(type='text', placeholder='Modelo' name='modelo')
+          div.form-group
+            label(for='submodelo') Submodelo:
+            input#submodelo.form-control(type='text', placeholder='Submodelo' name='submodelo')
+          div.form-group
+            label(for='tipo') Tipo:
+            input#tipo.form-control(type='text', placeholder='Tipo' name='tipo')
+          div.form-group
+            label(for='localizacao') Localização:
+            input#localizacao.form-control(type='text', placeholder='Localização' name='localizacao')
+          div.form-group
+            label(for='vendedor') Vendedor:
+            input#vendedor.form-control(type='text', placeholder='Vendedor' name='vendedor')
+          p
+            a.btn.btn-primary(href='/') Voltar 
+            | 
+            button.btn.btn-primary(type='submit') Salvar
+    

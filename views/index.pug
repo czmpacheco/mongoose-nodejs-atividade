@@ -1,0 +1,47 @@
+extends layout
+block content
+  br
+  h2 Importando e Exportando arquivo CSV usando NodeJS e MongoDB
+  br
+  p
+    a(href='/create' class='btn btn-primary' id='create') Cadastrar
+    | 
+    a(href='javascript:void(0)' class='btn btn-primary' id='importdata') Importar CSV 
+    |    
+    a(href='/export' class='btn btn-primary') Exportar CSV
+    |  
+    a(href='/reload' class='btn btn-primary') Recarregar Dados
+    | 
+    a(href='/deleteall' class='btn btn-primary') Limpar Dados
+  br  
+  p#message.alert.alert-success(style='display:none')
+  br
+  table.table.table-bordered
+    thead
+      tr
+        th #
+        th Fabricante
+        th Ano
+        th Preço
+        th Cor
+        th Condição
+        th Ações
+    tbody
+      each registro, i in content
+        tr
+          td 
+            h= i + 1
+          td
+            h= registro.fabricante
+          td
+            h= registro.ano
+          td
+            h= registro.preco
+          td
+            h= registro.cor
+          td
+            h= registro.condicao
+          td
+            a(href='/update/'+registro._id class='btn btn-primary') Editar
+            | 
+            a(href='/delete/'+registro._id class='btn btn-primary') Excluir
