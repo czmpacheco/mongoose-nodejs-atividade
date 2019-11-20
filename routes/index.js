@@ -100,7 +100,7 @@ router
   .get('/export', function (req, res, next) {
     var filename = "motos_exportado.csv";
     var dataArray;
-    Produto.find().lean().exec({}, function (err, ) {
+    Produto.find().lean().exec({}, function (err, Produto) {
       if (err) res.send(err);
       res.statusCode = 200;
       res.setHeader('Content-Type', 'text/csv');
