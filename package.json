@@ -17,7 +17,7 @@
     "http-errors": "~1.6.3",
     "mongoose": "^5.5.13",
     "morgan": "~1.9.1",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "description": "Aplicação em Node.JS que importa arquivo CSV para o MongoDB.",
   "main": "app.js",
